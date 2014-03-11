@@ -6,6 +6,7 @@ simply.on('singleClick', function(e) {
   	ajax({ url: 'http://192.168.1.230:8080/prende_tofi' }, function(data){
   var response = data.match(/<body>(.*?)<P\/>/)[1];
   simply.text({ title: 'Lights ON!', subtitle: "" });
+  simply.vibe('short');
 
 });
     
@@ -13,6 +14,8 @@ simply.on('singleClick', function(e) {
     ajax({ url: 'http://192.168.1.230:8080/apaga_tofi' }, function(data){
   var response = data.match(/<body>(.*?)<P\/>/)[1];
   simply.text({ title: 'Lights OFF!', subtitle: "" });
+    simply.vibe('short');
+
   })
   
 };
