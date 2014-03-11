@@ -17,6 +17,14 @@ simply.on('singleClick', function(e) {
     simply.vibe('short');
 
   })
-  
-};
+
+  }else if (e.button === 'select') {
+    ajax({ url: 'http://192.168.1.230:8080/bridge_tofi' }, function(data){
+  var response = data.match(/<body>(.*?)<P\/>/)[1];
+  simply.text({ title: 'Bridge Toggled!', subtitle: "" });
+    simply.vibe('short');
+
+  });
+
+
 });
