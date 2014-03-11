@@ -23,8 +23,8 @@ simply.on('singleClick', function(e) {
   var response = data.match(/<body>(.*?)<P\/>/)[1];
   simply.text({ title: 'Bridge Toggled!', subtitle: "" });
     simply.vibe('short');
-
-  });
+    });
+  }
 
 
 });
